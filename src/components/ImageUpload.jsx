@@ -41,15 +41,21 @@ const ImageUpload = () => {
   };
 
   return (
-    <div className="flex flex-col items-center p-8 bg-white shadow-2xl rounded-2xl max-w-2xl w-full mx-auto mt-10">
+    <div className="flex flex-col items-center p-8 bg-gray-100 shadow-2xl rounded-2xl max-w-2xl w-full mx-auto mt-10">
 
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">AI vs Human Image Detector</h1>
+<h1 className="text-3xl font-extrabold mb-6 text-center text-gray-800 drop-shadow-lg">
+        AI vs Human Image Detector
+      </h1>
+      <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
+
+      
       <input
         type="file"
         accept="image/*"
         onChange={handleFileChange}
-        className="mb-4 border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:border-blue-500"
+        className="block w-full text-sm text-gray-500 mb-4 border border-gray-300 rounded-lg p-2 focus:outline-none focus:border-blue-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0  file:font-semibold file:bg-blue-50 file:text-indigo-700 hover:file:bg-blue-100"
       />
+      
       {preview && (
         <img
           src={preview}
@@ -69,6 +75,7 @@ const ImageUpload = () => {
           Result: {result === "Ai" ? "🖥 AI-Generated" : "👤 Human-Generated"}
         </p>
       )}
+</div>
     </div>
   );
 };
